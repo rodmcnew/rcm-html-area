@@ -1,43 +1,36 @@
 <?php
 
 /**
- * ZF2 Module Config file for Rcm
+ * ZF2 Plugin Config file
  *
  * This file contains all the configuration for the Module as defined by ZF2.
  * See the docs for ZF2 for more information.
+ *
+ * PHP version 5.3
+ *
+ * LICENSE: No License yet
+ *
+ * @category  Reliv
+ * @author    Westin Shafer <wshafer@relivinc.com>
+ * @copyright 2012 Reliv International
+ * @license   License.txt New BSD License
+ * @version   GIT: <git_id>
  */
+
 return [
 
-    'asset_manager' => [
-        'resolver_configs' => [
-            'aliases' => [
-                'modules/rcm-html-editor/' => __DIR__ . '/../public/',
-            ],
-            'collections' => [
-                'modules/rcm-html-editor/rcm-html-editor.js' => [
-
-                    'modules/rcm-html-editor/adapter-tinymce/rcm-html-editor-config.js',
-                    'modules/rcm-html-editor/adapter-tinymce/rcm-html-editor-options.js',
-                    'modules/rcm-html-editor/adapter-tinymce/rcm-html-editor.js',
-                    'modules/rcm-html-editor/adapter-tinymce/rcm-html-editor-toolbar.js',
-
-                    'modules/rcm-html-editor/rcm-html-editor-guid.js',
-                    'modules/rcm-html-editor/rcm-html-editor-event-manager.js',
-                    'modules/rcm-html-editor/rcm-html-editor-service.js',
-
-                    'modules/rcm-html-editor/angular-rcm-html-editor.js',
-                ],
-                'modules/rcm-html-editor/rcm-html-editor.css' => [
-                    'modules/rcm-html-editor/adapter-tinymce/css/editor.css',
-                ],
-            ],
+    'rcmPlugin' => [
+        'RcmHtmlArea' => [
+            'type' => 'Common',
+            'display' => 'Rich Content Area',
+            'tooltip' => 'An editable area that allows you to add text, images, lists, links and more.',
+            'icon' => '',
+            'canCache'=> true
         ],
     ],
-    'view_helpers' => [
-        'invokables' => [
-            'rcmHtmlEditorIncludeHtmlEditor' =>
-                'RcmHtmlEditor\View\Helper\IncludeHtmlEditor',
-        ]
+    'view_manager' => [
+        'template_path_stack' => [
+            __DIR__ . '/../view',
+        ],
     ],
-
 ];

@@ -21,7 +21,7 @@ return [
     'asset_manager' => [
         'resolver_configs' => [
             'aliases' => [
-                'modules/rcm/html-area/' => __DIR__ . '/../public/',
+                'modules/rcm-html-area/' => __DIR__ . '/../public/',
             ],
         ],
     ],
@@ -30,7 +30,7 @@ return [
             'type' => 'Common',
             'display' => 'Rich Content Area',
             'tooltip' => 'An editable area that allows you to add text, images, lists, links and more.',
-            'icon' => '/modules/rcm/html-area/icon.png',
+            'icon' => '/modules/rcm-html-area/icon.png',
             'canCache'=> true
         ],
     ],

@@ -18,13 +18,19 @@
  */
 
 return [
-
+    'asset_manager' => [
+        'resolver_configs' => [
+            'aliases' => [
+                'modules/rcm-html-area/' => __DIR__ . '/../public/',
+            ],
+        ],
+    ],
     'rcmPlugin' => [
         'RcmHtmlArea' => [
             'type' => 'Common',
             'display' => 'Rich Content Area',
             'tooltip' => 'An editable area that allows you to add text, images, lists, links and more.',
-            'icon' => '',
+            'icon' => '/modules/rcm-html-area/icon.png',
             'canCache'=> true
         ],
     ],
